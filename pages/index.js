@@ -1,8 +1,8 @@
-import Head from 'next/head'
+import Head from "next/head";
 
 export default function Home() {
   return (
-    <div className="container">
+    <div className="container" style={{ background: "#dddddd" }}>
       <Head>
         <title>New Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -17,7 +17,14 @@ export default function Home() {
           Get started by editing <code>pages/index.js</code>
         </p>
 
-        <div className="grid">
+        <br />
+        <p> Name => {process.env.NAME} </p>
+        <br />
+        <p> Job => {process.env.JOB} </p>
+        <br />
+        <p> Currency => {process.env.CURRENCY} </p>
+
+        {/* <div className="grid">
           <a href="https://nextjs.org/docs" className="card">
             <h3>Documentation &rarr;</h3>
             <p>Find in-depth information about Next.js features and API.</p>
@@ -45,7 +52,7 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
-        </div>
+        </div> */}
       </main>
 
       <footer>
@@ -54,7 +61,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
         </a>
       </footer>
@@ -205,5 +212,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
